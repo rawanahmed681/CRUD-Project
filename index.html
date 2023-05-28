@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <table class="table w-75 mx-auto my-4">
+      <thead>
+        <th>Index</th>
+        <th>ProductName</th>
+        <th>ProductPrice</th>
+        <th>ProductCategory</th>
+        <th>ProductDesc</th>
+        <th>update</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <div class="w-75 mx-auto py-3">
+      <h3 class="fw-bolder my-2">Product Managment System</h3>
+      <label for="productNameInput" class="mb-3">ProductName :</label>
+      <input type="text" class="form-control mb-3" id="productNameInput" onblur="validateProductName();"/>
+      <div class="alert alert-danger d-none" id="invalidProduct">
+        Product Name Is not Valid
+      </div>
+      <div class="alert alert-danger d-none" id="emptyProduct">
+        Product Name shouid't be empty
+      </div>
+      <label for="ProductPriceInput" class="mb-3">ProductPrice :</label>
+      <input type="number" class="form-control mb-3" id="productPriceInput" onblur="validatePrice();"/>
+      <div class="alert alert-danger d-none" id="invalidProductPrice">
+        Product Name Is not Valid
+      </div>
+      <div class="alert alert-danger d-none" id="emptyProductPrice">
+        Product Name shouid't be empty
+      </div>
+      <label for="ProductCategoryInput" class="mb-3">ProductCategory :</label>
+      <input type="text" class="form-control mb-3" id="productCategoryInput" onblur="validateCategory();"/>
+      <div class="alert alert-danger d-none" id="invalidProductCategory">
+        Product Name Is not Valid
+      </div>
+      <div class="alert alert-danger d-none" id="emptyProductCategory">
+        Product Name shouid't be empty
+      </div>
+      <label for="ProductDescInput" class="mb-3">ProductDesc :</label>
+      <textarea
+        type="text"
+        class="form-control mb-3"
+        id="productDescInput"
+        onblur="validateDesc();"></textarea>
+        <div class="alert alert-danger d-none" id="invalidProductDesc">
+          Product Name Is not Valid
+        </div>
+        <div class="alert alert-danger d-none" id="emptyProductDesc">
+          Product Name shouid't be empty
+        </div>
+      <button class="btn btn-info" id="addBtn" onclick="addProduct();">
+        Add Product
+      </button>
+      <button
+        class="btn btn-info d-none"
+        id="updateBtn"
+        onclick="addUpdatedProduct();"
+      >
+        Update Product
+      </button>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
